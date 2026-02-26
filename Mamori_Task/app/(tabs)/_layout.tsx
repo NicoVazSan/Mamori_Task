@@ -1,32 +1,32 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Tabs } from "expo-router";
+import React from "react";
 
 import { Ionicons } from "@expo/vector-icons";
-import { BOTTOMTABCOLORS} from '../../constants/colors';
-import { BOTTOMTABTEXT } from '../../constants/texts';
-import { BOTTOMTABICONS } from '../../constants/Icons';
+import { BOTTOMTABCOLORS } from "../../constants/colors";
+import { BOTTOMTABICONS } from "../../constants/Icons";
+import { BOTTOMTABTEXT } from "../../constants/texts";
 
 export default function TabsLayout() {
   return (
     <Tabs
-      initialRouteName="scanwin" // Scan & Win seleccionado por defecto
+      initialRouteName="index"
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: BOTTOMTABCOLORS.bottomTabActiveText,
         tabBarInactiveTintColor: BOTTOMTABCOLORS.bottomTabInactiveText,
-        tabBarStyle: { backgroundColor: BOTTOMTABCOLORS.bottomTabBackground, height: 72 },
+        tabBarStyle: {
+          backgroundColor: BOTTOMTABCOLORS.bottomTabBackground,
+          height: 72,
+        },
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: BOTTOMTABTEXT.home,
           tabBarLabel: BOTTOMTABTEXT.home,
           tabBarIcon: ({ color, size }) => (
-            <Ionicons 
-            name={BOTTOMTABICONS.home} 
-            color={color} 
-            size={size} />
+            <Ionicons name={BOTTOMTABICONS.home} color={color} size={size} />
           ),
         }}
       />
@@ -37,10 +37,10 @@ export default function TabsLayout() {
           title: BOTTOMTABTEXT.products,
           tabBarLabel: BOTTOMTABTEXT.products,
           tabBarIcon: ({ color, size }) => (
-            <Ionicons 
-            name={BOTTOMTABICONS.products} 
-            color={color} 
-            size={size} 
+            <Ionicons
+              name={BOTTOMTABICONS.products}
+              color={color}
+              size={size}
             />
           ),
         }}
@@ -52,45 +52,32 @@ export default function TabsLayout() {
           title: BOTTOMTABTEXT.lists,
           tabBarLabel: BOTTOMTABTEXT.lists,
           tabBarIcon: ({ color, size }) => (
-            <Ionicons 
-            name={BOTTOMTABICONS.lists} 
-            color={color} 
-            size={size} 
-            />
+            <Ionicons name={BOTTOMTABICONS.lists} color={color} size={size} />
           ),
         }}
       />
 
       <Tabs.Screen
-        name="scanwin"
+        name="index"
         options={{
           title: BOTTOMTABTEXT.scanwin,
           tabBarLabel: BOTTOMTABTEXT.scanwin,
           tabBarIcon: ({ color, size }) => (
-            <Ionicons 
-            name={BOTTOMTABICONS.scanwin} 
-            color={color} 
-            size={size} 
-            />
+            <Ionicons name={BOTTOMTABICONS.scanwin} color={color} size={size} />
           ),
         }}
       />
 
-     <Tabs.Screen
+      <Tabs.Screen
         name="profile"
         options={{
           title: BOTTOMTABTEXT.profile,
           tabBarLabel: BOTTOMTABTEXT.profile,
           tabBarIcon: ({ color, size }) => (
-            <Ionicons 
-            name={BOTTOMTABICONS.profile} 
-            color={color} 
-            size={size} 
-            />
+            <Ionicons name={BOTTOMTABICONS.profile} color={color} size={size} />
           ),
         }}
       />
-
     </Tabs>
   );
 }
