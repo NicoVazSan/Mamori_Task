@@ -36,6 +36,8 @@ export default function ThreeButtons() {
   );
 }
 
+/* BUTTON FUNCTION */
+
 type ActionButtonProps = {
   icon: keyof typeof Ionicons.glyphMap;
   label: string;

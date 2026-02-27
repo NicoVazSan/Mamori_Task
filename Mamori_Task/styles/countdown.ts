@@ -21,24 +21,21 @@ export const STYLES = StyleSheet.create({
 
   container: {
     flex: 1,
-    marginLeft: 10,
     justifyContent: "center",
   },
 
   title: {
-    fontSize: 28,
+    fontSize: 20,
     fontWeight: "800",
     color: COUNTDOWNSTYLECOLORS.titleColor,
-    marginBottom: -5,
-    marginLeft: 0,
+    marginLeft: 15,
   },
 
   /* DATE BOX */
   dateBox: {
     backgroundColor: COUNTDOWNSTYLECOLORS.dateBoxBgColor,
     borderRadius: 12,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
+    paddingVertical: 12,
     alignItems: "center",
     minWidth: 70,
   },
@@ -67,7 +64,7 @@ export const STYLES = StyleSheet.create({
   digit: {
     color: COUNTDOWNSTYLECOLORS.digitColor,
     fontWeight: "900",
-    fontSize: 36,
+    fontSize: 44,
   },
 
   separator: {

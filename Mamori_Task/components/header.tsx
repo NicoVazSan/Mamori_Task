@@ -1,4 +1,4 @@
-import { IMAGES } from "@/constants/images";
+import { HEADERIMAGES } from "@/constants/images";
 import { Ionicons } from "@expo/vector-icons";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -15,7 +15,7 @@ export default function Header() {
       <View style={STYLES.container}>
         {/* LEFT SIDE */}
         <View style={STYLES.left}>
-          <Image source={IMAGES.profileImage} style={STYLES.avatar} />
+          <Image source={HEADERIMAGES.profileImage} style={STYLES.avatar} />
 
           <View>
             <Text style={STYLES.title}>{HEADERTEXT.greeting}</Text>
